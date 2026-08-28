@@ -20,15 +20,19 @@
 		main { max-width: 48rem; margin-top: clamp(8rem, 20vh, 13rem); }
 		.eyebrow { color: var(--muted); font: .66rem Arial, sans-serif; letter-spacing: .18em; text-transform: uppercase; }
 		h1 { margin: 1rem 0 3rem; font-size: clamp(3.5rem, 9vw, 7rem); font-weight: 400; letter-spacing: -.055em; line-height: .86; }
-		.project { display: flex; justify-content: space-between; gap: 2rem; padding: 1.2rem 0; border-top: 1px solid var(--line); font: .76rem Arial, sans-serif; }
-		.project span:last-child { color: var(--muted); }
+		.project { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.5rem 0; border-top: 1px solid var(--line); font: .76rem Arial, sans-serif; }
+		.project-info { flex: 1; }
+		.project-title { color: var(--ink); font-weight: 600; margin-bottom: 0.4rem; }
+		.project-desc { color: var(--muted); }
+		.project-btn { color: var(--ink); border: 1px solid var(--ink); padding: 0.5rem 1.2rem; text-decoration: none; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; transition: all 180ms ease; white-space: nowrap; }
+		.project-btn:hover, .project-btn:focus-visible { background: var(--ink); color: #030303; }
 	</style>
 </head>
 <body>
 	<div class="page">
 		<canvas id="flow" aria-hidden="true"></canvas><div class="flow-wash" aria-hidden="true"></div>
 		<nav aria-label="Primary navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
-		<main><div class="eyebrow">All of my Finished and Unfinished Projects</div><h1>Projects</h1><div class="project"><span>Beans</span><span>Beans is a game about strategy and timing, you have to collect 30 beans on a 30 second time limit</span></div><div class="project"><span>Moving-Bougt</span><span>2026</span></div></main>
+		<main><div class="eyebrow">All of my Finished and Unfinished Projects</div><h1>Projects</h1><div class="project"><div class="project-info"><div class="project-title">Beans</div><div class="project-desc">Beans is my first ever game. You have to dodge bombs and collect 30 beans in 45 seconds to win</div></div><a class="project-btn" href="beans.html">Play</a></div><div class="project"><div class="project-info"><div class="project-title">More Projects Coming</div><div class="project-desc">Working on exciting new projects. Stay tuned!</div></div></div></main>
 	</div>
 	<script src="flow.js"></script>
 </body>
